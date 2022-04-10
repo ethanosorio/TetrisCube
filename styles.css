@@ -1,4 +1,16 @@
 body{
     margin: 0;
+    background-image: linear-gradient(lightgrey, grey);
 }
-
+@font-face {
+    font-family: Tetris;
+    src: url(tetricide.ttf);
+}
+#title{
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    font-family: Tetris;
+    font-size: 500%;
+    color: Black;
+}
