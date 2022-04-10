@@ -2,13 +2,13 @@
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x909090);
 //set the camera
-const camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 3.5, 1000 );
-camera.position.set(4, 4, 4);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 3.5, 100);
+camera.position.set(7.5, 7.5, 7.5);
 camera.lookAt(0, 0, 0);
 //set the renderer
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 //set the light
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
 scene.add(ambientLight);
@@ -20,20 +20,19 @@ scene.add(dirLight);
 
 //create the polycube objects
 var objects = [];
-
-//uses function from polycubes.js
+//uses function from polycubes.js to create each shape
 generateShapes();
 
+//set up the orbitcontrols to move the camera and the dragcontrols for the blocks
+const camControls = new THREE.OrbitControls(camera, renderer.domElement);
+const dragControls = new THREE.DragControls(objects, camera, renderer.domElement);
+//when a block is being dragged, the camera does not move, and the block is highlighted
+dragControls.addEventListener('dragstart', function(event){camControls.enabled = false; event.object.material.emissive.set(0x101010);});
+dragControls.addEventListener('dragend', function(event){camControls.enabled = true; event.object.material.emissive.set(0x000000);});
 
-var controls = new THREE.DragControls( objects, camera, renderer.domElement );
-// add event listener to highlight dragged objects
-controls.addEventListener( 'dragstart', function ( event ) {event.object.material.emissive.set( 0x101010 );});
-controls.addEventListener( 'dragend', function ( event ) {event.object.material.emissive.set( 0x000000 );});
-
-function animate() {
+//animate the scene
+function animate(){
     requestAnimationFrame(animate);
-    //group.rotation.x += 0.01;
-    //group.rotation.y += 0.01;
     renderer.render(scene, camera);
-};
+}
 animate();

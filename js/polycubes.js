@@ -83,7 +83,8 @@ function generateShapes(){
         newBox2.translate(1,0.5,0); // set position
         shape7.push(newBox2); // add to merge array
     var singleGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(shape7);
-    const object7 = new THREE.Mesh(singleGeometry, material7); 
+    const object7 = new THREE.Mesh(singleGeometry, material7);
+    object7.position.x = 4;
     scene.add(object7);
     objects.push(object7);
 }
