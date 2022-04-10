@@ -9,6 +9,8 @@ function generateShapes(){
         shape1.push(newBox2); // add to merge array
     var singleGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(shape1);
     const object1 = new THREE.Mesh(singleGeometry, material1); 
+    object1.position.y = 2;
+    object1.position.z = -3;
     scene.add(object1);
     objects.push(object1);
 
@@ -22,6 +24,8 @@ function generateShapes(){
         shape2.push(newBox2); // add to merge array
     var singleGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(shape2);
     const object2 = new THREE.Mesh(singleGeometry, material2); 
+    object2.position.x = 2;
+    object2.position.z = -3;
     scene.add(object2);
     objects.push(object2);
 
@@ -35,6 +39,7 @@ function generateShapes(){
         shape3.push(newBox2); // add to merge array
     var singleGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(shape3);
     const object3 = new THREE.Mesh(singleGeometry, material3); 
+    object3.position.z = 4;
     scene.add(object3);
     objects.push(object3);
 
@@ -48,6 +53,7 @@ function generateShapes(){
         shape4.push(newBox2); // add to merge array
     var singleGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(shape4);
     const object4 = new THREE.Mesh(singleGeometry, material4); 
+    object4.position.y = -3;
     scene.add(object4);
     objects.push(object4);
 
@@ -58,6 +64,9 @@ function generateShapes(){
         shape5.push(newBox1); // add to merge array
     var singleGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(shape5);
     const object5 = new THREE.Mesh(singleGeometry, material5); 
+    object5.position.x = -3;
+    object5.position.y = 3;
+    object5.position.z = -1;
     scene.add(object5);
     objects.push(object5);
 
@@ -70,7 +79,9 @@ function generateShapes(){
         newBox2.translate(1,0.5,0); // set position
         shape6.push(newBox2); // add to merge array
     var singleGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(shape6);
-    const object6 = new THREE.Mesh(singleGeometry, material6); 
+    const object6 = new THREE.Mesh(singleGeometry, material6);
+    object6.position.x = -3;
+    object6.position.z = 1;
     scene.add(object6);
     objects.push(object6);
 
