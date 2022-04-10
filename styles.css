@@ -4,11 +4,11 @@ body{
 }
 @font-face {
     font-family: Tetris;
-    src: url(tetricide.ttf);
+    src: url(fonts/tetricide.ttf);
 }
 @font-face {
     font-family: gameText;
-    src: url(gametext.ttf);
+    src: url(fonts/gametext.ttf);
 }
 #container{
     font-size: small;
