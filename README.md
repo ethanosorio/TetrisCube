@@ -13,7 +13,7 @@ The pieces can be dragged and arranged in 3D space.
 
 ### Libraries
 [THREE.js](https://github.com/mrdoob/three.js) from [Mr Doob](https://mrdoob.com).
-I tried to implement physics with [Ammo.js](https://github.com/kripken/ammo.js) but opted not to given the time restraint.
+I tried to implement physics with [Ammo.js](https://github.com/kripken/ammo.js) but opted not to, given the time restraint.
 
 ### Program
 Using THREE.js I created a blank scene with a camera, lights, and a renderer.
