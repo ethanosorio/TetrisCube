@@ -1,3 +1,4 @@
+//generates 7 different meshes and adds them to the scene
 function generateShapes(){
     var shape1 = []; // merge array
     const material1 = new THREE.MeshLambertMaterial( {color: 0xff0000});
