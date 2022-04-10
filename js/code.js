@@ -15,7 +15,10 @@ const dirLight = new THREE.DirectionalLight(0xffffff, 0.6);
 dirLight.position.set(10, 30, 0);
 scene.add(dirLight);
 
-
+Ammo().then(start);
+function start(){
+    console.log("physics")
+}
 
 //create the polycube objects
 var objects = [];
