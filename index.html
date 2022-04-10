@@ -3,12 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Puzzle</title>
+        <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
         <link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-        <div id="title">TETRIS CUBE</div>
+        <div id="container">
+            <div id="title">TETRIS CUBE</div>
+            <div id="name">Learning Experience by<br>Ethan Osorio</div>
+            <div id="desc">
 
-		<script src="js/three.js"></script>
+                Objective: Fit all the pieces into a 3x3x3 cube <br>
+                Controls: Use the mouse to drag pieces and move/zoom the camera
+            </div>
+            <a href="https://github.com/ethanosorio/TetrisCube" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </div>
+		
+        <script src="js/three.js"></script>
         <script src="js/bufferGeom.js"></script>
         <script src="js/drag.js"></script>
         <script src="js/OrbitControls.js"></script>

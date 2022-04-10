@@ -6,11 +6,47 @@ body{
     font-family: Tetris;
     src: url(tetricide.ttf);
 }
+@font-face {
+    font-family: gameText;
+    src: url(gametext.ttf);
+}
+#container{
+    font-size: small;
+    font-family: gameText;
+}
 #title{
-    position: relative;
-    justify-content: center;
-    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
     font-family: Tetris;
-    font-size: 500%;
+    font-size: 750%;
     color: Black;
+}
+#name{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+    font-family: gameText;
+}
+#desc{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: small;
+    font-family: gameText;
+}
+#container a{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: black;
+    font-size: 50px;
+    transition: all ease-in-out 250ms;
+    transform-origin: bottom right;
+}
+#container a:hover{
+    color: rgba(0, 0, 0, .5); 
+    transform: scale(1.5);
 }
